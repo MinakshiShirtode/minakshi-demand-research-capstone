@@ -42,3 +42,4 @@ src/rq/            pipeline package     notebooks/         executed notebooks 01
 tests/             synthetic tests      reports/           whitepaper.pdf, figures/, tables/
 docs/              output contracts     scripts/           notebook + report builders, lock generator
 ```
+"# minakshi-demand-research-capstone" 
