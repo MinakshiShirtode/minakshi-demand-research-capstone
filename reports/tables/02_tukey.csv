@@ -1,0 +1,4 @@
+group1,group2,mean_diff,ci_low,ci_high,p_adj,reject
+Event,Holiday,6.875,-7.5456,21.2956,0.4738,False
+Event,Regular,22.6806,12.6743,32.6869,0.0,True
+Holiday,Regular,15.8056,2.7885,28.8226,0.015,True

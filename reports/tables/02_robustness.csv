@@ -1,0 +1,6 @@
+check,estimate
+primary Welch difference,22.68
+1 permutation test (p),0.0002
+"2 OLS + linear trend, HC3 (coef)","21.55 [16.11, 27.00], p=8e-15"
+3 leave-one-week-out (range of diff),21.36 to 24.00 (max p=0.00618)
+4 log-scale Welch (p; log diff),0.00028; 0.156 (≈16.9%)

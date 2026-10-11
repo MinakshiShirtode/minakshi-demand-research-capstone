@@ -1,0 +1,5 @@
+,KMeans,DBSCAN,Hierarchical,day_type
+KMeans,1.0,0.709,0.881,0.552
+DBSCAN,0.709,1.0,0.727,0.657
+Hierarchical,0.881,0.727,1.0,0.65
+day_type,0.552,0.657,0.65,1.0

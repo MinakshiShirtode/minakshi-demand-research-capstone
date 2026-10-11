@@ -1,0 +1,4 @@
+model,mae_diff_vs_baseline,ci_low,ci_high,wilcoxon_p
+Naive,3.5625,0.8125,6.1875,0.0382
+SARIMA,-5.0966,-5.4409,-4.6654,0.0
+Ridge,-4.5754,-5.1147,-4.0016,0.0
