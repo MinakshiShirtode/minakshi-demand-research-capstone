@@ -43,3 +43,4 @@ tests/             synthetic tests      reports/           whitepaper.pdf, figur
 docs/              output contracts     scripts/           notebook + report builders, lock generator
 ```
 "# minakshi-demand-research-capstone" 
+"# minakshi-demand-research-capstone" 
