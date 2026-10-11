@@ -98,7 +98,10 @@ def evaluate_split(y, order, seasonal_order, test_days=TEST_DAYS):
              "Naive": naive(train, len(test))}
     tab = pd.DataFrame([dict(model=k, MAPE=mape(test, v), RMSE=rmse(test, v), MAE=mae(test, v))
                         for k, v in preds.items()]).sort_values("RMSE").reset_index(drop=True)
-    lb = acorr_ljungbox(res.resid.iloc[1:], lags=[SEASON], return_df=True)
+    # drop the burn-in residuals created by differencing (diffuse initialisation: resid == raw value)
+    burn = order[1] + seasonal_order[3] * seasonal_order[1]
+    pq = order[0] + order[2] + seasonal_order[0] + seasonal_order[2]
+    lb = acorr_ljungbox(res.resid.iloc[max(burn, 1):], lags=[SEASON], model_df=pq, return_df=True)
     return tab, preds, test, res, float(lb["lb_pvalue"].iloc[0])
 
 

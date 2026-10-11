@@ -163,4 +163,5 @@ Defined in `docs/OUTPUT_CONTRACTS.md` and enforced in `tests/test_pipeline_synth
 
 | Timestamp (UTC) | Section | Deviation | Reason |
 |---|---|---|---|
-| | | | |
+| 2026-10-11T05:50Z | Header | Header states lock time 05:45:00Z; the actual commit/tag time is 05:43:07Z (git tag `prereg-v1` is authoritative). | Typing error in header; no analytic content changed. |
+| 2026-10-11T05:55Z | F (diagnostics) | Ljung-Box residual test now drops differencing burn-in residuals (`d + s*D` observations) and uses `model_df = p+q+P+Q`. The first real-data run (full pipeline) returned p = 8.6e-6, an artefact of including the diffuse-initialisation residuals. After the correction p = 0.58. | Implementation bug in a diagnostic, found on first real run. No model-selection or test decision depended on it. Code fix in commit following `prereg-v1`. |
